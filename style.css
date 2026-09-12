@@ -1,0 +1,200 @@
+/**Una regla css consta de dos partes:
+1) el selector
+2) el bloque de declaraciones 
+atributo:valor*/
+/* el @import url() es mala práctica porque es bloqueante a la hora que el navegador lee los documentos*/
+@import url('otro-style.css');
+
+html {
+/*     scroll-behavior: smooth;;
+ */
+ scroll-behavior: smooth;
+    font-size: 45px;
+}
+*,*::before,*::after{font-size: inherit;}
+body {
+    
+    background-color:white;
+    margin-left: 10px;
+}
+
+a {
+    margin: 3px;
+}
+h2:target{color: #f00;}
+.css-curso {color:#00f;}
+/*  El estilo (style) en línea es el que predomina; le sigue el estilo interno, y el final es el externo  */
+h1{color: red; 
+    border: 3px;
+    border-color: red;
+    border-style: solid;
+}
+#box{color: #f50;
+    border: 3px;
+    border-style: solid;
+border-color: blue;
+width: 200px;
+height: 200px;
+}
+h2{color: #0f0;}
+#texto{color: #00f;
+    background-color: #0f0;
+}
+/* un ejemplo  con el texto 32.*/
+.texto32{
+    font-size: 32px;
+    color: yellow;
+}
+#etiquetas-basicas{
+    color: #0f5;
+}
+.bg-blue{background-color: blue;}
+.otro{font-style: oblique;}
+.hijos-directos>li{background-color: #0f0;}
+.hijos-descendientes b{
+background-color: #f00 ;
+}
+.hermanos-generales~li{
+    background-color: #f00;
+}
+.hermanos-adyacentes+li{
+        background-color: #f0f;
+
+}
+/* el comodín (*) aplicará el estilo si contiene el texto en cuestión en cualquier parte.*/
+.selectores-atributos a[href*="jonmircha"]{
+   color: orangered;
+   text-decoration: none;
+}
+/* el comodín (^) aplicará el estilo si contiene el texto en cuestión al principio */
+
+.selectores-atributos a[href^="https"]{
+   color: steelblue;
+}
+/* el símbolo ($) aplicará el estilo si contiene el texto en cuestión al final */
+
+.selectores-atributos a[href$="monios"]{
+   background-color: #0f5;
+}
+/* el símbolo (~) aplicará el estilo si contiene el texto en cuestión en una lista separada por espacios*/
+.selectores-atributos a[href~="cursos"]{
+  background-color: #f00;
+}
+/* el símbolo (|) aplicará el estilo si contiene el texto en cuestión en una lista separada por espacios y que después del texto en cuestión venga un guión medio*/
+.selectores-atributos a[class|="horas"]{
+  font-style: italic;
+}
+.selectores-atributos a[class|="nueva"]{
+  font-style: italic;
+}
+.selector-universal{font-family: sans-serif;
+font-style: italic;
+
+}
+/* pseudoclases */
+article id:target{color: #f00; }
+.pseudoclases *:required{ border-color: #f00;}
+.pseudoclases *:valid{ border-color: blue;}
+.pseudoclases *::selection{font-size: 50px;}
+.pseudoclases *:invalid{border-color: #f0f;}
+/* las siguientes pseudoclases link active visited hover necesariamente van en ese orden*/
+a[href^="#inicio"]:link{
+    /* font-style: italic; */
+color: #0f0;}
+
+a[href^="#inicio"]:active{
+    /* font-style: italic; */
+color: #00f;}
+a[href^="#inicio"]:visited{
+    /* font-style: italic; */
+color: #0ff;}
+a[href^="#inicio"]:hover{
+    /* font-style: italic; */
+color: #f00;}
+.pseudoclases *:focus{
+    background-color: steelblue;
+}
+a[href^="#inicio"]{
+    /* font-style: italic; */
+text-decoration: none;}
+/* afecta al primer elemento de la lista li*/
+.list-pseudoclases li:first-child{color: green;
+    
+}
+/* afecta al último elemento de la lista li*/
+
+.list-pseudoclases li:last-child{color: red;
+ }
+ /* afecta al  elemento 3 de la lista li*/
+
+ .list-pseudoclases li:nth-child(3){color: navy;}
+  /* afecta al  elemento 2n(n es el numero de posición de los li) de la lista li. Ej:
+  2n n=1  2n=2*1=2
+  n=2 2n=4
+  n=3 2n=6 */
+ .list-pseudoclases li:nth-child(2n){color: pink;}
+ .list-pseudoclases li:nth-child(2n+1){font-size: 2rem;}
+ /* afecta al  elemento par de la lista li*/
+ .list-pseudoclases li:nth-child(even){background-color: yellow;}
+ /* afecta al  elemento impar de la lista li*/
+ .list-pseudoclases li:nth-child(odd){background-color: green;}
+  /* afecta al  elemento primero del tipo p de la lista */
+
+.article p:first-of-type{
+    color: red;
+}
+  /* afecta al  elemento último del tipo p de la lista */
+  .article p:last-of-type{
+      color: blue;
+  }
+  /* afecta al  elemento primero del tipo div de la lista */
+    .article div:first-of-type{
+      color: yellow;
+  }
+  /* afecta al  elemento último del tipo div de la lista */
+    .article div:last-of-type{
+      color: red;
+  }
+
+    .article div:nth-of-type(2){
+      background-color: blue;
+  }
+
+    .article div:nth-of-type(n+1){
+      font-size: 1.5rem;
+  }
+      .article p:nth-of-type(2n+1){
+      font-style: italic;
+  }
+
+      .article p:nth-of-type(even){
+      font-size: 2rem;
+  }
+  /* pseudoclases de negación .(not)*/
+      .article :not(p){
+      font-size: 3rem;
+  }
+  .listas-articulo :not(p){color:  red;}
+.emoji::after{
+    content: "😄";
+}
+.emoji::before{
+    content: "💌";
+}
+.pseudoelementos p::first-letter{font-size: 2rem;
+    color: red;
+}
+.pseudoelementos2 p::first-letter{font-size: 2rem;
+    color: blue;
+}
+.pseudoelementos2 p::first-line{font-size: 1.5rem;
+    color: blue;
+}
+/* Este pseudoelemento le define los estilos a la selección, en este caso de todo el documento*/
+*::selection{
+    background-color: black;
+    color: yellow;
+}
+.placeholder::placeholder{
+    color: red;
+}
