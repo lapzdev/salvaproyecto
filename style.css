@@ -225,7 +225,8 @@ y toma en cuenta los siguientes conceptos en este orden:
 }
 /* Esta es una muestra de la especificidad de los estilos en cascada . Los 3stilos en cascada se cumplen (se sobreescribe la definición de estilos anterior por la que le siga), siempre y cuando el peso de la especifidad de la definición anterior no sea mayor a la posterior*/
 /* Importante : el orden para escribir el selector es el siguiente:
-etiqueta#id.class*/
+etiqueta#id.class 
+y se escriben juntos cuando se encuentran en el mismo elemento, en caso de que se encuentren en elementos hijos o hermanos se denotan separados de la forma estudiada anteriormente en el curso.*/
 blockquote#cita-marco.cita-marco{background-color: brown;}
 
 blockquote#cita-marco{background-color: yellow;}
