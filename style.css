@@ -102,9 +102,6 @@ a[href^="#inicio"]:link{
     /* font-style: italic; */
 color: #0f0;}
 
-a[href^="#inicio"]:active{
-    /* font-style: italic; */
-color: #00f;}
 a[href^="#inicio"]:visited{
     /* font-style: italic; */
 color: #0ff;}
@@ -114,6 +111,10 @@ color: #f00;}
 .pseudoclases *:focus{
     background-color: steelblue;
 }
+a[href^="#inicio"]:active{
+    /* font-style: italic; */
+color: #00f;}
+
 a[href^="#inicio"]{
     /* font-style: italic; */
 text-decoration: none;}
@@ -198,3 +199,20 @@ text-decoration: none;}
 .placeholder::placeholder{
     color: red;
 }
+/* Cascada: mecanismo en el que el navegador aplica los estilos. 
+y toma en cuenta los siguientes conceptos en este orden:
+1) El Origen del Código 
+* User agent(los estilos por defecto del navegador)
+* Personalizaciones del usuario 
+* Los estilos del autor
+
+2) La Especificidad del Selector 
+3) Orden de aparición 
+ 
+ La especificidad es el peso que tiene un selector cuando existe un conflicto de estilos. Se calcula de la siguiente forma:
+ 0,0,0,1--------Etiquetas y pseudoelementos
+ 0,0,1,0-------Clases,atributos y pseudoclases
+ 0,1,0,0-------Identificadores
+ 1,0,0,0-------Estilos en línea 
+ !important---- Rompe la especificidad */
+
