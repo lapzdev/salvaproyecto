@@ -234,5 +234,6 @@ blockquote.cita-marco{background-color: red;}
 #cita-marco{background-color: orange;}
 
 .cita-marco{background-color: green;}
-/* en el caso de la palabra reservada ! important, es la que tiene máxima especificidad y sólo es superada por otra definición de estilo que también tenga !important y este más abajo en la definición de estilos, o sea , por cascada.*/
+/* en el caso de la palabra reservada ! important, es la que tiene máxima especificidad y sólo es superada por otra definición de estilo que también tenga !important y este más abajo en la definición de estilos, o sea , por cascada. El siguiente ejemplo lo ilustra:*/
 blockquote{background-color: blue!important;}
+blockquote{background-color: moccasin!important;}
