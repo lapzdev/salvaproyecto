@@ -235,5 +235,47 @@ blockquote.cita-marco{background-color: red;}
 
 .cita-marco{background-color: green;}
 /* en el caso de la palabra reservada ! important, es la que tiene máxima especificidad y sólo es superada por otra definición de estilo que también tenga !important y este más abajo en la definición de estilos, o sea , por cascada. El siguiente ejemplo lo ilustra:*/
-blockquote{background-color: blue!important;}
-blockquote{background-color: moccasin!important;}
+blockquote.cita-marco{background-color: blue!important;
+    color: red;
+}
+blockquote.cita-marco{background-color: moccasin!important;}
+.cita{color: initial;}
+/* La herencia (inherit ) es la capacidad de un elemento hijo, o nieto, de heredar valores de atributo de un ancestro. No se heredan los valores de los bordes ni el color de fondo. Y para un atributo recuperar los valores iniciales sólo hay que ponerle al atributo el valor initial */
+.cita-soc-block{
+    background-color: red;
+    font-size: 2rem;
+    color: yellow;
+    border-style: dotted;
+    border-width: 8px;
+    border-color: blue;
+}
+.cita-soc-cite{
+    /* Como se explicó en este caso ni el color de fondo ni los bordes se heredan*/
+    background-color: blue;
+   
+    
+    /* En el caso del font-size y el color 
+    automáticamente se hereda el tamaño
+    de letra y su color por el elemento hijo*/
+}
+.cita-soc-block2{
+    background-color: red;
+    font-size: 2rem;
+    color: yellow;
+    border-style: dotted;
+    border-width: 8px;
+    border-color: blue;
+}
+.cita-soc-cite2{
+    /* Como se explicó en este caso ni el color de fondo ni los bordes se heredan*/
+    background-color: blue;
+    /*excepto que se defina explícitamente*/
+        background-color: inherit;
+border-style: inherit;
+        border-width: inherit;
+    border-color: inherit;
+
+    /* En el caso del font-size y el color 
+    automáticamente se hereda el tamaño
+    de letra y su color por el elemento hijo*/
+}
