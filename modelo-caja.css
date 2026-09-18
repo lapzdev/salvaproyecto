@@ -1,0 +1,37 @@
+h1.clase {
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  color: blue;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: orangered;
+  border-width: thin;
+  /* thin=1px; medium=3px; thick=5px*/
+  /*Aplicando el principio de los valores de los estilos que se van sobrescribiendo en cascada ej.: el estilo border-width que toma el último valor siempre y cuando la especificidad sea la misma */
+  
+    border-width: thick;
+/*Shorthand: me permite sintetizar varias propiedades en una sola propiedad
+ej: border-width: 3px;
+border-style: solid;
+border-color: black;
+shorthand -> 
+border: 3px solid black;*/
+border: 3px solid bl;
+border: thick solid red;
+  
+  
+}
+
+p {
+  /*   display: flex;
+ */
+  margin: 20px;
+  border-style: solid;
+  border-width: 3px;
+  
+}
