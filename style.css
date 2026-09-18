@@ -281,4 +281,15 @@ border-style: inherit;
     automáticamente se hereda el tamaño
     de letra y su color por el elemento hijo*/
     /* El valor initial es el valor inicial que puede tomar un atributo. ej: el font-size: initial tomara el valor 16px en una página html cuyo valor por defecto sea 16px. */
+} blockquote{
+    color: red;
+    font-size: 36px;
+        font-size: initial;
+        color: initial;
+
 }
+.anonimo{ font-size: 1.5rem;}
+.an:before{content: "😄";}
+.an:after{content: "🥳";}
+.sac:before{content: "🤮";}
+.sac:after{content: "✖️";}
