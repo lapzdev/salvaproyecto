@@ -293,3 +293,13 @@ border-style: inherit;
 .an:after{content: "🥳";}
 .sac:before{content: "🤮";}
 .sac:after{content: "✖️";}
+/* Los elementos que poseen por defecto la propiedad display con el valor inline tienen las siguientes  características:
+ocupan exactamente lo que miden.
+no pueden modificar ancho y alto.
+comparten la fila con otros elementos.
+su margin y padding sólo empujan otros elementos en la línea horizontal, nunca en la vertical.
+En cambio los elementos con un display con un valor por defecto block tienen las siguientes características:
+ocupan toda la fila.
+tienen ancho y alto modificables.
+el margin y el padding empujan otros elementos en la linea vertical y la horizontal.
+aunque pueden modificar el ancho, siguen ocupando toda la línea Horizontal.*/
