@@ -303,3 +303,12 @@ ocupan toda la fila.
 tienen ancho y alto modificables.
 el margin y el padding empujan otros elementos en la linea vertical y la horizontal.
 aunque pueden modificar el ancho, siguen ocupando toda la línea Horizontal.*/
+.inline{border: 3px solid blue;
+    margin: 30px;
+}
+.block{border: 3px solid red;
+    margin: 30px;
+}
+.block1{border: 3px solid red;
+    margin: 70px;
+}
