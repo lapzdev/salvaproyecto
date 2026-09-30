@@ -6,199 +6,305 @@ atributo:valor*/
 @import url('otro-style.css');
 
 html {
-/*     scroll-behavior: smooth;;
+    /*     scroll-behavior: smooth;;
  */
- scroll-behavior: smooth;
+    scroll-behavior: smooth;
     font-size: 45px;
 }
-*,*::before,*::after{font-size: inherit;}
+
+*,
+*::before,
+*::after {
+    font-size: inherit;
+}
+
 body {
     
-    background-color:white;
+    background-color: white;
     margin-left: 10px;
 }
 
 a {
     margin: 3px;
 }
-h2:target{color: #f00;}
-.css-curso {color:#00f;}
+
+h2:target {
+    color: #f00;
+}
+
+.css-curso {
+    color: #00f;
+}
+
 /*  El estilo (style) en línea es el que predomina; le sigue el estilo interno, y el final es el externo  */
-h1{color: red; 
+h1 {
+    color: red;
     border: 3px;
     border-color: red;
     border-style: solid;
 }
-#box{color: #f50;
+
+#box {
+    color: #f50;
     border: 3px;
     border-style: solid;
-border-color: blue;
-width: 200px;
-height: 200px;
+    border-color: blue;
+    width: 200px;
+    height: 200px;
 }
-h2{color: #0f0;}
-#texto{color: #00f;
+
+h2 {
+    color: #0f0;
+}
+
+#texto {
+    color: #00f;
     background-color: #0f0;
 }
+
 /* un ejemplo  con el texto 32.*/
-.texto32{
+.texto32 {
     font-size: 32px;
     color: yellow;
 }
-#etiquetas-basicas{
+
+#etiquetas-basicas {
     color: #0f5;
 }
-.bg-blue{background-color: blue;}
-.otro{font-style: oblique;}
-.hijos-directos>li{background-color: #0f0;}
-.hijos-descendientes b{
-background-color: #f00 ;
+
+.bg-blue {
+    background-color: blue;
 }
-.hermanos-generales~li{
+
+.otro {
+    font-style: oblique;
+}
+
+.hijos-directos>li {
+    background-color: #0f0;
+}
+
+.hijos-descendientes b {
     background-color: #f00;
 }
-.hermanos-adyacentes+li{
-        background-color: #f0f;
 
+.hermanos-generales~li {
+    background-color: #f00;
 }
-/* el comodín (*) aplicará el estilo si contiene el texto en cuestión en cualquier parte.*/
-.selectores-atributos a[href*="jonmircha"]{
-   color: orangered;
-   text-decoration: none;
-}
-/* el comodín (^) aplicará el estilo si contiene el texto en cuestión al principio */
 
-.selectores-atributos a[href^="https"]{
-   color: steelblue;
-}
-/* el símbolo ($) aplicará el estilo si contiene el texto en cuestión al final */
-
-.selectores-atributos a[href$="monios"]{
-   background-color: #0f5;
-}
-/* el símbolo (~) aplicará el estilo si contiene el texto en cuestión en una lista separada por espacios*/
-.selectores-atributos a[href~="cursos"]{
-  background-color: #f00;
-}
-/* el símbolo (|) aplicará el estilo si contiene el texto en cuestión en una lista separada por espacios y que después del texto en cuestión venga un guión medio*/
-.selectores-atributos a[class|="horas"]{
-  font-style: italic;
-}
-.selectores-atributos a[class|="nueva"]{
-  font-style: italic;
-}
-.selector-universal{font-family: sans-serif;
-font-style: italic;
-
-}
-/* pseudoclases */
-article id:target{color: #f00; }
-.pseudoclases *:required{ border-color: #f00;}
-.pseudoclases *:valid{ border-color: blue;}
-.pseudoclases *::selection{font-size: 50px;}
-.pseudoclases *:invalid{border-color: #f0f;}
-/* las siguientes pseudoclases link active visited hover necesariamente van en ese orden*/
-a[href^="#inicio"]:link{
-    /* font-style: italic; */
-color: #0f0;}
-
-a[href^="#inicio"]:visited{
-    /* font-style: italic; */
-color: #0ff;}
-a[href^="#inicio"]:hover{
-    /* font-style: italic; */
-color: #f00;}
-.pseudoclases *:focus{
-    background-color: steelblue;
-}
-a[href^="#inicio"]:active{
-    /* font-style: italic; */
-color: #00f;}
-
-a[href^="#inicio"]{
-    /* font-style: italic; */
-text-decoration: none;}
-/* afecta al primer elemento de la lista li*/
-.list-pseudoclases li:first-child{color: green;
+.hermanos-adyacentes+li {
+    background-color: #f0f;
     
 }
+
+/* el comodín (*) aplicará el estilo si contiene el texto en cuestión en cualquier parte.*/
+.selectores-atributos a[href*="jonmircha"] {
+    color: orangered;
+    text-decoration: none;
+}
+
+/* el comodín (^) aplicará el estilo si contiene el texto en cuestión al principio */
+
+.selectores-atributos a[href^="https"] {
+    color: steelblue;
+}
+
+/* el símbolo ($) aplicará el estilo si contiene el texto en cuestión al final */
+
+.selectores-atributos a[href$="monios"] {
+    background-color: #0f5;
+}
+
+/* el símbolo (~) aplicará el estilo si contiene el texto en cuestión en una lista separada por espacios*/
+.selectores-atributos a[href~="cursos"] {
+    background-color: #f00;
+}
+
+/* el símbolo (|) aplicará el estilo si contiene el texto en cuestión en una lista separada por espacios y que después del texto en cuestión venga un guión medio*/
+.selectores-atributos a[class|="horas"] {
+    font-style: italic;
+}
+
+.selectores-atributos a[class|="nueva"] {
+    font-style: italic;
+}
+
+.selector-universal {
+    font-family: sans-serif;
+    font-style: italic;
+    
+}
+
+/* pseudoclases */
+article id:target {
+    color: #f00;
+}
+
+.pseudoclases *:required {
+    border-color: #f00;
+}
+
+.pseudoclases *:valid {
+    border-color: blue;
+}
+
+.pseudoclases *::selection {
+    font-size: 50px;
+}
+
+.pseudoclases *:invalid {
+    border-color: #f0f;
+}
+
+/* las siguientes pseudoclases link active visited hover necesariamente van en ese orden*/
+a[href^="#inicio"]:link {
+    /* font-style: italic; */
+    color: #0f0;
+}
+
+a[href^="#inicio"]:visited {
+    /* font-style: italic; */
+    color: #0ff;
+}
+
+a[href^="#inicio"]:hover {
+    /* font-style: italic; */
+    color: #f00;
+}
+
+.pseudoclases *:focus {
+    background-color: steelblue;
+}
+
+a[href^="#inicio"]:active {
+    /* font-style: italic; */
+    color: #00f;
+}
+
+a[href^="#inicio"] {
+    /* font-style: italic; */
+    text-decoration: none;
+}
+
+/* afecta al primer elemento de la lista li*/
+.list-pseudoclases li:first-child {
+    color: green;
+    
+}
+
 /* afecta al último elemento de la lista li*/
 
-.list-pseudoclases li:last-child{color: red;
- }
- /* afecta al  elemento 3 de la lista li*/
+.list-pseudoclases li:last-child {
+    color: red;
+}
 
- .list-pseudoclases li:nth-child(3){color: navy;}
-  /* afecta al  elemento 2n(n es el numero de posición de los li) de la lista li. Ej:
+/* afecta al  elemento 3 de la lista li*/
+
+.list-pseudoclases li:nth-child(3) {
+    color: navy;
+}
+
+/* afecta al  elemento 2n(n es el numero de posición de los li) de la lista li. Ej:
   2n n=1  2n=2*1=2
   n=2 2n=4
   n=3 2n=6 */
- .list-pseudoclases li:nth-child(2n){color: pink;}
- .list-pseudoclases li:nth-child(2n+1){font-size: 2rem;}
- /* afecta al  elemento par de la lista li*/
- .list-pseudoclases li:nth-child(even){background-color: yellow;}
- /* afecta al  elemento impar de la lista li*/
- .list-pseudoclases li:nth-child(odd){background-color: green;}
-  /* afecta al  elemento primero del tipo p de la lista */
+.list-pseudoclases li:nth-child(2n) {
+    color: pink;
+}
 
-.article p:first-of-type{
+.list-pseudoclases li:nth-child(2n+1) {
+    font-size: 2rem;
+}
+
+/* afecta al  elemento par de la lista li*/
+.list-pseudoclases li:nth-child(even) {
+    background-color: yellow;
+}
+
+/* afecta al  elemento impar de la lista li*/
+.list-pseudoclases li:nth-child(odd) {
+    background-color: green;
+}
+
+/* afecta al  elemento primero del tipo p de la lista */
+
+.article p:first-of-type {
     color: red;
 }
-  /* afecta al  elemento último del tipo p de la lista */
-  .article p:last-of-type{
-      color: blue;
-  }
-  /* afecta al  elemento primero del tipo div de la lista */
-    .article div:first-of-type{
-      color: yellow;
-  }
-  /* afecta al  elemento último del tipo div de la lista */
-    .article div:last-of-type{
-      color: red;
-  }
 
-    .article div:nth-of-type(2){
-      background-color: blue;
-  }
+/* afecta al  elemento último del tipo p de la lista */
+.article p:last-of-type {
+    color: blue;
+}
 
-    .article div:nth-of-type(n+1){
-      font-size: 1.5rem;
-  }
-      .article p:nth-of-type(2n+1){
-      font-style: italic;
-  }
+/* afecta al  elemento primero del tipo div de la lista */
+.article div:first-of-type {
+    color: yellow;
+}
 
-      .article p:nth-of-type(even){
-      font-size: 2rem;
-  }
-  /* pseudoclases de negación .(not)*/
-      .article :not(p){
-      font-size: 3rem;
-  }
-  .listas-articulo :not(p){color:  red;}
-.emoji::after{
+/* afecta al  elemento último del tipo div de la lista */
+.article div:last-of-type {
+    color: red;
+}
+
+.article div:nth-of-type(2) {
+    background-color: blue;
+}
+
+.article div:nth-of-type(n+1) {
+    font-size: 1.5rem;
+}
+
+.article p:nth-of-type(2n+1) {
+    font-style: italic;
+}
+
+.article p:nth-of-type(even) {
+    font-size: 2rem;
+}
+
+/* pseudoclases de negación .(not)*/
+.article :not(p) {
+    font-size: 3rem;
+}
+
+.listas-articulo :not(p) {
+    color: red;
+}
+
+.emoji::after {
     content: "😄";
 }
-.emoji::before{
+
+.emoji::before {
     content: "💌";
 }
-.pseudoelementos p::first-letter{font-size: 2rem;
+
+.pseudoelementos p::first-letter {
+    font-size: 2rem;
     color: red;
 }
-.pseudoelementos2 p::first-letter{font-size: 2rem;
+
+.pseudoelementos2 p::first-letter {
+    font-size: 2rem;
     color: blue;
 }
-.pseudoelementos2 p::first-line{font-size: 1.5rem;
+
+.pseudoelementos2 p::first-line {
+    font-size: 1.5rem;
     color: blue;
 }
+
 /* Este pseudoelemento le define los estilos a la selección, en este caso de todo el documento*/
-*::selection{
+*::selection {
     background-color: black;
     color: yellow;
 }
-.placeholder::placeholder{
+
+.placeholder::placeholder {
     color: red;
 }
+
 /* Cascada: mecanismo en el que el navegador aplica los estilos. 
 y toma en cuenta los siguientes conceptos en este orden:
 1) El Origen del Código 
@@ -216,33 +322,61 @@ y toma en cuenta los siguientes conceptos en este orden:
  1,0,0,0-------Estilos en línea 
  !important---- Rompe la especificidad */
 
-.elementosc .cartel{color: blue;}
-.elementosc p.parrafo .resaltado:before{content: "😘";
+.elementosc .cartel {
+    color: blue;
+}
+
+.elementosc p.parrafo .resaltado:before {
+    content: "😘";
     
 }
-.elementosc .parrafo .resaltado:after{content: "☀️";
+
+.elementosc .parrafo .resaltado:after {
+    content: "☀️";
     
 }
+
 /* Esta es una muestra de la especificidad de los estilos en cascada . Los 3stilos en cascada se cumplen (se sobreescribe la definición de estilos anterior por la que le siga), siempre y cuando el peso de la especifidad de la definición anterior no sea mayor a la posterior*/
 /* Importante : el orden para escribir el selector es el siguiente:
 etiqueta#id.class[selector]:(pseudoclase ó pseudoelemento){}
 y se escriben juntos cuando se encuentran en el mismo elemento, en caso de que se encuentren en elementos hijos o hermanos se denotan separados de la forma estudiada anteriormente en el curso.*/
-blockquote#cita-marco.cita-marco{background-color: brown;}
+blockquote#cita-marco.cita-marco {
+    background-color: brown;
+}
 
-blockquote#cita-marco{background-color: yellow;}
-blockquote.cita-marco{background-color: red;}
-#cita-marco{background-color: orange;}
+blockquote#cita-marco {
+    background-color: yellow;
+}
 
-.cita-marco{background-color: green;}
+blockquote.cita-marco {
+    background-color: red;
+}
+
+#cita-marco {
+    background-color: orange;
+}
+
+.cita-marco {
+    background-color: green;
+}
+
 /* en el caso de la palabra reservada ! important, es la que tiene máxima especificidad y sólo es superada por otra definición de estilo que también tenga !important y este más abajo en la definición de estilos, o sea , por cascada. El siguiente ejemplo lo ilustra:*/
-blockquote.cita-marco{background-color: blue!important;
+blockquote.cita-marco {
+    background-color: blue !important;
     color: red;
 }
-blockquote.cita-marco{background-color: moccasin!important;}
-.cita{color: initial;}
+
+blockquote.cita-marco {
+    background-color: moccasin !important;
+}
+
+.cita {
+    color: initial;
+}
+
 /* La herencia (inherit ) es la capacidad de un elemento hijo, o nieto, de heredar valores de atributo de un ancestro.
 Un elemento hijo heredara los valores de atributo de un elemento padre mientras no modifique dicho atributo por el usuario. Ej: El font-size de un elemento hijo se hereda por defecto del font-size de un elemento padre.No se heredan los valores de los bordes ni el color de fondo. Y para un atributo recuperar los valores iniciales sólo hay que ponerle al atributo el valor initial */
-.cita-soc-block{
+.cita-soc-block {
     background-color: red;
     font-size: 2rem;
     color: yellow;
@@ -250,17 +384,19 @@ Un elemento hijo heredara los valores de atributo de un elemento padre mientras 
     border-width: 8px;
     border-color: blue;
 }
-.cita-soc-cite{
+
+.cita-soc-cite {
     /* Como se explicó en este caso ni el color de fondo ni los bordes se heredan,
     siempre y cuando mo se defina explicitamente la herencia*/
     background-color: blue;
-   
+    
     
     /* En el caso del font-size y el color 
     automáticamente se hereda el tamaño
     de letra y su color por el elemento hijo*/
 }
-.cita-soc-block2{
+
+.cita-soc-block2 {
     background-color: red;
     font-size: 2rem;
     color: yellow;
@@ -268,31 +404,50 @@ Un elemento hijo heredara los valores de atributo de un elemento padre mientras 
     border-width: 8px;
     border-color: blue;
 }
-.cita-soc-cite2{
+
+.cita-soc-cite2 {
     /* Como se explicó en este caso ni el color de fondo ni los bordes se heredan*/
     background-color: blue;
     /*excepto que se defina explícitamente*/
-        background-color: inherit;
-border-style: inherit;
-        border-width: inherit;
+    background-color: inherit;
+    border-style: inherit;
+    border-width: inherit;
     border-color: inherit;
-
+    
     /* En el caso del font-size y el color 
     automáticamente se hereda el tamaño
     de letra y su color por el elemento hijo*/
     /* El valor initial es el valor inicial que puede tomar un atributo. ej: el font-size: initial tomara el valor 16px en una página html cuyo valor por defecto sea 16px. */
-} blockquote{
+}
+
+blockquote {
     color: red;
     font-size: 36px;
-        font-size: initial;
-        color: initial;
-
+    font-size: initial;
+    color: initial;
+    
 }
-.anonimo{ font-size: 1.5rem;}
-.an:before{content: "😄";}
-.an:after{content: "🥳";}
-.sac:before{content: "🤮";}
-.sac:after{content: "✖️";}
+
+.anonimo {
+    font-size: 1.5rem;
+}
+
+.an:before {
+    content: "😄";
+}
+
+.an:after {
+    content: "🥳";
+}
+
+.sac:before {
+    content: "🤮";
+}
+
+.sac:after {
+    content: "✖️";
+}
+
 /* Los elementos que poseen por defecto la propiedad display con el valor inline tienen las siguientes  características:
 ocupan exactamente lo que miden.
 no pueden modificar ancho y alto.
@@ -303,12 +458,108 @@ ocupan toda la fila.
 tienen ancho y alto modificables.
 el margin y el padding empujan otros elementos en la linea vertical y la horizontal.
 aunque pueden modificar el ancho, siguen ocupando toda la línea Horizontal.*/
-.inline{border: 3px solid blue;
+.inline {
+    border: 3px solid blue;
     margin: 30px;
 }
-.block{border: 3px solid red;
+
+.formato {
+    border: 3px solid blue;
     margin: 30px;
 }
-.block1{border: 3px solid red;
+
+.block {
+    border: 3px solid red;
+    margin: 30px;
+}
+
+.block1 {
+    border: 3px solid red;
     margin: 70px;
+}
+
+.inline--block {
+    display: block;
+    width: 450px;
+    height: 350px;
+}
+
+.block--inline {
+    display: inline;
+    width: 450px;
+    height: 350px;
+}
+
+div.display-inline-block {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    
+}
+.seccion .tabla{
+    border: thin solid red;
+}
+.seccion{visibility: hidden;}
+.seccion .tabla th,.seccion .tabla td,.seccion .tabla{
+    border: thin solid red;
+    
+}
+.tabla{padding: 15px;}
+/* Esta propiedad boolean(vibility) tiene el valor por defecto y el valor hidden,que hace invisible el elemento, aunque ocupando su lugar en el documento.*/
+.visibilidad{
+    visibility: hidden;
+}
+.desborde-visible{
+    overflow: visible;
+    width: 550px;
+    background-color: #00ff0050;
+    height: 350px;
+}
+.desborde-hidden{
+    overflow: hidden;
+    width: 550px;
+    background-color: #00ff0050;
+    height: 350px;
+}
+.desborde-scroll{
+     overflow: scroll;
+         width: 550px;
+    background-color: #00ff0050;
+    height: 350px;
+   
+}
+.desborde-auto{
+     overflow: auto;
+         width: 550px;
+    background-color: #00ff0050;
+    height: 350px;
+   
+}
+.desborde-x-scroll{
+     overflow-x: scroll;
+         width: 550px;
+    background-color: #00ff0050;
+    height: 350px;
+   
+}
+.desborde-y-scroll{
+     overflow-y: scroll;
+         width: 550px;
+    background-color: #00ff0050;
+    height: 350px;
+   
+}
+.desborde-y-auto{
+     overflow-y: auto;
+         width: 550px;
+    background-color: #00ff0050;
+    height: 350px;
+   
+}
+.desborde-x-auto{
+     overflow-x: auto;
+         width: 550px;
+    background-color: #00ff0050;
+    height: 350px;
+   
 }
