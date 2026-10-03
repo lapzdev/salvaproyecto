@@ -496,70 +496,203 @@ div.display-inline-block {
     height: 300px;
     
 }
-.seccion .tabla{
+
+.seccion .tabla {
     border: thin solid red;
 }
-.seccion{visibility: hidden;}
-.seccion .tabla th,.seccion .tabla td,.seccion .tabla{
+
+.seccion {
+    visibility: hidden;
+}
+
+.seccion .tabla th,
+.seccion .tabla td,
+.seccion .tabla {
     border: thin solid red;
     
 }
-.tabla{padding: 15px;}
+
+.tabla {
+    padding: 15px;
+}
+
 /* Esta propiedad boolean(vibility) tiene el valor por defecto y el valor hidden,que hace invisible el elemento, aunque ocupando su lugar en el documento.*/
-.visibilidad{
+.visibilidad {
     visibility: hidden;
 }
-.desborde-visible{
+
+.desborde-visible {
     overflow: visible;
     width: 550px;
     background-color: #00ff0050;
     height: 350px;
 }
-.desborde-hidden{
+
+.desborde-hidden {
     overflow: hidden;
     width: 550px;
     background-color: #00ff0050;
     height: 350px;
 }
-.desborde-scroll{
-     overflow: scroll;
-         width: 550px;
+
+.desborde-scroll {
+    overflow: scroll;
+    width: 550px;
     background-color: #00ff0050;
     height: 350px;
+    
+}
+
+.desborde-auto {
+    overflow: auto;
+    width: 550px;
+    background-color: #00ff0050;
+    height: 350px;
+    
+}
+
+.desborde-x-scroll {
+    overflow-x: scroll;
+    width: 550px;
+    background-color: #00ff0050;
+    height: 350px;
+    
+}
+
+.desborde-y-scroll {
+    overflow-y: scroll;
+    width: 550px;
+    background-color: #00ff0050;
+    height: 350px;
+    
+}
+
+.desborde-y-auto {
+    overflow-y: auto;
+    width: 550px;
+    background-color: #00ff0050;
+    height: 350px;
+    
+}
+
+.desborde-x-auto {
+    overflow-x: auto;
+    width: 550px;
+    background-color: #00ff0050;
+    height: 350px;
+    
+}
+
+.container {
+    background-color: steelblue;
+}
+
+.float-left {
+    float: left;
+    background-color: red;
+}
+
+.float-right {
+    float: right;
+    background-color: blue;
+    
+}
+
+.seccion-central {
+    background-color: green;
+}
+
+.containerinit .seccion-central {
+    clear: none;
+}
+
+.container1 .seccion-central {
+    clear: left;
+}
+
+.container1>.float-left {
+    float: none;
+}
+
+.container2 .seccion-central {
+    clear: right;
+}
+
+.container3 .seccion-central {
+    clear: both;
+}
+
+.container {
+    border: thin solid blue;
+    width: 80vw;
+    height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left {
+    float: left!important;
+    width: 30%;
+    height: 30%;
+    border: thin solid blue;
+    margin: 1%;
+    background-color: red;
+}
+
+.container :nth-child(1) {
+    float: left;
+    margin-left: 2.5%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.container :nth-child(2) {
+float: left;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+/* clear: right;    
+ */
+
+.container :nth-child(3) {
+    float: right;
+        margin-top: auto;
+    margin-bottom: auto;
+}
+
+.container :nth-child(4) {
+    float: left;
+    margin-left: 2.5%;
+
+}
+
+.container :nth-child(5) {
+float: left;
+clear: right;}
+
+.container :nth-child(6) {
+    float: right;
+}
+.container :nth-child(7) {
+    float: left;
+    margin-left: 2.5%;
+
+}
+
+.container :nth-child(8) {
+float: left;
+clear: right;}
+
+.container :nth-child(9) {
+    float: right;
+}
+.seccion-collapse{
+    width: 90vw;
+    height: 90vh;
+   background-color: blue; 
    
 }
-.desborde-auto{
-     overflow: auto;
-         width: 550px;
-    background-color: #00ff0050;
-    height: 350px;
-   
-}
-.desborde-x-scroll{
-     overflow-x: scroll;
-         width: 550px;
-    background-color: #00ff0050;
-    height: 350px;
-   
-}
-.desborde-y-scroll{
-     overflow-y: scroll;
-         width: 550px;
-    background-color: #00ff0050;
-    height: 350px;
-   
-}
-.desborde-y-auto{
-     overflow-y: auto;
-         width: 550px;
-    background-color: #00ff0050;
-    height: 350px;
-   
-}
-.desborde-x-auto{
-     overflow-x: auto;
-         width: 550px;
-    background-color: #00ff0050;
-    height: 350px;
-   
+.item{background-color: red;
+   border: 3px solid black;
+   margin: 50px;
 }
