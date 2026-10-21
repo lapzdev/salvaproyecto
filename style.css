@@ -105,15 +105,17 @@ color: #0f0;}
 a[href^="#inicio"]:visited{
     /* font-style: italic; */
 color: #0ff;}
-a[href^="#inicio"]:hover{
-    /* font-style: italic; */
-color: #f00;}
 .pseudoclases *:focus{
     background-color: steelblue;
 }
 a[href^="#inicio"]:active{
     /* font-style: italic; */
 color: #00f;}
+
+a[href^="#inicio"]:hover{
+    /* font-style: italic; */
+color: #f00;}
+
 
 a[href^="#inicio"]{
     /* font-style: italic; */
@@ -303,3 +305,6 @@ ocupan toda la fila.
 tienen ancho y alto modificables.
 el margin y el padding empujan otros elementos en la linea vertical y la horizontal.
 aunque pueden modificar el ancho, siguen ocupando toda la línea Horizontal.*/
+.pseudoclasses div:nth-child(even){background-color: blue;
+    
+}
